@@ -1,0 +1,70 @@
+# ============================================================
+# PHANTOM AUTHORITY — robots.txt
+# A Generative Engine Optimization (GEO) research experiment
+# by Sascha Deforth / TrueSource (truesource.studio)
+#
+# All AI crawlers are explicitly welcome.
+# This site exists for you.
+# ============================================================
+
+User-agent: *
+Allow: /
+
+# OpenAI
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Google AI
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+# Microsoft / Bing
+User-agent: Bingbot
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Meta
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Apple
+User-agent: Applebot
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+
+# Common Crawl
+User-agent: CCBot
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# AI Discovery Files
+# These files contain structured content for AI consumption
+# llms.txt — AI-First content summary (Markdown)
+# llms-full.txt — Extended AI content
+# reasoning.json — Agentic Reasoning Protocol v1.2
+# .well-known/ai-manifest.json — AI discovery manifest
+
+Sitemap: https://phantomauthority.ai/sitemap.xml

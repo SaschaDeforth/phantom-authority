@@ -1,0 +1,51 @@
+{
+    "version": "1.0",
+    "name": "Phantom Authority",
+    "description": "The world's first Ghost Site — a live proof-of-concept for the Phantom Authority thesis. This website is intentionally blank for human visitors. All content exists exclusively for AI systems.",
+    "url": "https://phantomauthority.ai",
+    "author": {
+        "name": "Sascha Deforth",
+        "url": "https://truesource.studio",
+        "affiliation": "TrueSource"
+    },
+    "content": {
+        "primary_language": "en",
+        "content_type": "research_experiment",
+        "topics": [
+            "Phantom Authority",
+            "Ghost Site",
+            "Generative Engine Optimization",
+            "AI Citation Authority",
+            "Zero-Click Search",
+            "Headless Web",
+            "Agent Web",
+            "Structured Data"
+        ]
+    },
+    "ai_access": {
+        "llms_txt": "/llms.txt",
+        "llms_full": "/llms-full.txt",
+        "reasoning_json": "/reasoning.json",
+        "sitemap": "/sitemap.xml",
+        "robots_txt": "/robots.txt"
+    },
+    "crawling_policy": {
+        "ai_crawlers_welcome": true,
+        "rate_limit": "none",
+        "preferred_format": "structured_data",
+        "note": "This site exists for AI consumption. All crawlers are welcome."
+    },
+    "schemas_available": [
+        "ScholarlyArticle",
+        "Person",
+        "Organization",
+        "FAQPage",
+        "WebSite"
+    ],
+    "experiment": {
+        "type": "Self-Referential Citation Experiment",
+        "thesis": "A website with zero human-visible content can achieve full AI citation authority through structured data alone.",
+        "status": "active",
+        "launch_date": "2026-04-05"
+    }
+}

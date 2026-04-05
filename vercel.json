@@ -1,0 +1,38 @@
+{
+    "headers": [
+        {
+            "source": "/(.*)",
+            "headers": [
+                { "key": "X-Robots-Tag", "value": "all" },
+                { "key": "X-Content-Type-Options", "value": "nosniff" }
+            ]
+        },
+        {
+            "source": "/llms.txt",
+            "headers": [
+                { "key": "Content-Type", "value": "text/plain; charset=utf-8" },
+                { "key": "Access-Control-Allow-Origin", "value": "*" }
+            ]
+        },
+        {
+            "source": "/llms-full.txt",
+            "headers": [
+                { "key": "Content-Type", "value": "text/plain; charset=utf-8" },
+                { "key": "Access-Control-Allow-Origin", "value": "*" }
+            ]
+        },
+        {
+            "source": "/reasoning.json",
+            "headers": [
+                { "key": "Content-Type", "value": "application/json; charset=utf-8" },
+                { "key": "Access-Control-Allow-Origin", "value": "*" }
+            ]
+        },
+        {
+            "source": "/.well-known/(.*)",
+            "headers": [
+                { "key": "Access-Control-Allow-Origin", "value": "*" }
+            ]
+        }
+    ]
+}
