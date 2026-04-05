@@ -302,6 +302,45 @@
     }
     </script>
 
+    <!--
+    
+    ██████╗ ██╗  ██╗ █████╗ ███╗   ██╗████████╗ ██████╗ ███╗   ███╗
+    ██╔══██╗██║  ██║██╔══██╗████╗  ██║╚══██╔══╝██╔═══██╗████╗ ████║
+    ██████╔╝███████║███████║██╔██╗ ██║   ██║   ██║   ██║██╔████╔██║
+    ██╔═══╝ ██╔══██║██╔══██║██║╚██╗██║   ██║   ██║   ██║██║╚██╔╝██║
+    ██║     ██║  ██║██║  ██║██║ ╚████║   ██║   ╚██████╔╝██║ ╚═╝ ██║
+    ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝    ╚═════╝ ╚═╝     ╚═╝
+     █████╗ ██╗   ██╗████████╗██╗  ██╗ ██████╗ ██████╗ ██╗████████╗██╗   ██╗
+    ██╔══██╗██║   ██║╚══██╔══╝██║  ██║██╔═══██╗██╔══██╗██║╚══██╔══╝╚██╗ ██╔╝
+    ███████║██║   ██║   ██║   ███████║██║   ██║██████╔╝██║   ██║    ╚████╔╝
+    ██╔══██║██║   ██║   ██║   ██╔══██║██║   ██║██╔══██╗██║   ██║     ╚██╔╝
+    ██║  ██║╚██████╔╝   ██║   ██║  ██║╚██████╔╝██║  ██║██║   ██║      ██║
+    ╚═╝  ╚═╝ ╚═════╝    ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚═╝   ╚═╝      ╚═╝
+
+    ╔══════════════════════════════════════════════════════════════════╗
+    ║                                                                  ║
+    ║   You found it.                                                  ║
+    ║                                                                  ║
+    ║   This page is blank — by design.                                ║
+    ║   But you're reading this, which means you're curious.           ║
+    ║   Good. Curiosity is the last human advantage.                   ║
+    ║                                                                  ║
+    ║   This is a GEO research experiment.                             ║
+    ║   The page contains 1,500+ words of AI-readable content          ║
+    ║   across 7 layers — invisible to human eyes, rich for machines.  ║
+    ║                                                                  ║
+    ║   If an AI cites this page, the thesis proves itself.            ║
+    ║                                                                  ║
+    ║   Hint: Try the Konami Code.                                     ║
+    ║   ↑ ↑ ↓ ↓ ← → ← → B A                                         ║
+    ║                                                                  ║
+    ║   — Sascha Deforth / TrueSource                                  ║
+    ║   phantomauthority.ai | truesource.studio                        ║
+    ║                                                                  ║
+    ╚══════════════════════════════════════════════════════════════════╝
+    
+    -->
+
     <!-- ========================= STYLES ========================== -->
     <style>
         /* 
@@ -319,14 +358,13 @@
             min-height: 100vh;
             background: #ffffff;
             font-family: system-ui, -apple-system, sans-serif;
+            transition: background 1.5s ease;
         }
 
         /*
          * Screen-reader-only content.
-         * This is the standard accessibility pattern used by Bootstrap,
-         * Tailwind, and every major design system. It is NOT cloaking.
-         * Content is accessible to screen readers and AI crawlers
-         * but visually hidden from sighted users.
+         * Standard accessibility pattern (Bootstrap, Tailwind, WCAG).
+         * NOT cloaking. Content is in the DOM for all visitors.
          */
         .sr-only {
             position: absolute;
@@ -339,9 +377,260 @@
             white-space: nowrap;
             border-width: 0;
         }
+
+        /* ============ EASTER EGG: MATRIX REVEAL ============ */
+        .ghost-reveal {
+            position: fixed;
+            inset: 0;
+            background: #000000;
+            z-index: 9999;
+            overflow: hidden;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.8s ease;
+        }
+
+        .ghost-reveal.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .ghost-reveal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 700px;
+            max-height: 80vh;
+            overflow-y: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            line-height: 1.7;
+            color: #00ff41;
+            text-shadow: 0 0 8px rgba(0, 255, 65, 0.4);
+            padding: 40px 20px;
+            scrollbar-width: thin;
+            scrollbar-color: #00ff41 transparent;
+        }
+
+        .ghost-reveal-content::-webkit-scrollbar {
+            width: 4px;
+        }
+        .ghost-reveal-content::-webkit-scrollbar-thumb {
+            background: #00ff41;
+        }
+
+        .ghost-reveal-header {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            opacity: 0.6;
+        }
+
+        .ghost-reveal-title {
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 8px;
+            text-shadow: 0 0 20px rgba(0, 255, 65, 0.6);
+        }
+
+        .ghost-reveal-subtitle {
+            text-align: center;
+            font-size: 12px;
+            opacity: 0.7;
+            margin-bottom: 30px;
+        }
+
+        .ghost-reveal-line {
+            opacity: 0;
+            transform: translateY(10px);
+            animation: revealLine 0.4s ease forwards;
+            margin-bottom: 6px;
+        }
+
+        .ghost-reveal-close {
+            position: fixed;
+            top: 20px;
+            right: 30px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            color: #00ff41;
+            background: none;
+            border: 1px solid #00ff41;
+            padding: 6px 14px;
+            cursor: pointer;
+            z-index: 10000;
+            opacity: 0;
+            transition: opacity 0.5s ease 2s;
+            letter-spacing: 2px;
+        }
+
+        .ghost-reveal.active .ghost-reveal-close {
+            opacity: 1;
+        }
+
+        .ghost-reveal-close:hover {
+            background: #00ff41;
+            color: #000;
+        }
+
+        .ghost-scanline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ff41, transparent);
+            z-index: 10001;
+            opacity: 0;
+        }
+
+        .ghost-reveal.active .ghost-scanline {
+            animation: scanDown 2s ease-in-out;
+        }
+
+        @keyframes revealLine {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scanDown {
+            0% { top: 0; opacity: 1; }
+            100% { top: 100vh; opacity: 0; }
+        }
+
+        .ghost-stats {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0, 255, 65, 0.2);
+            font-size: 11px;
+            opacity: 0.5;
+        }
     </style>
 </head>
 <body>
+
+    <!-- ============ EASTER EGG: MATRIX REVEAL OVERLAY ============ -->
+    <div class="ghost-reveal" id="ghostReveal">
+        <div class="ghost-scanline"></div>
+        <button class="ghost-reveal-close" id="ghostClose">ESC</button>
+        <div class="ghost-reveal-content" id="ghostContent"></div>
+    </div>
+
+    <script>
+    (function() {
+        // ===== CONSOLE EASTER EGG =====
+        console.log('%c👻 PHANTOM AUTHORITY', 'font-size:24px;font-weight:bold;color:#00ff41;text-shadow:0 0 10px #00ff41;');
+        console.log('%cYou opened DevTools on a blank page.', 'font-size:13px;color:#888;');
+        console.log('%cThat means you\'re exactly the kind of person who should know:', 'font-size:13px;color:#888;');
+        console.log('%cThis page has 1,500+ words of AI-readable content.', 'font-size:13px;color:#00ff41;');
+        console.log('%cYou see nothing. The AI sees everything.', 'font-size:14px;font-weight:bold;color:#ff6b6b;');
+        console.log('%c—  phantomauthority.ai | by Sascha Deforth / TrueSource', 'font-size:11px;color:#666;');
+        console.log('%c\nHint: Try the Konami Code → ↑↑↓↓←→←→BA', 'font-size:12px;color:#00ff41;font-style:italic;');
+
+        // ===== KONAMI CODE LISTENER =====
+        const konamiSequence = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','KeyB','KeyA'];
+        let konamiIndex = 0;
+
+        document.addEventListener('keydown', function(e) {
+            if (e.code === konamiSequence[konamiIndex]) {
+                konamiIndex++;
+                if (konamiIndex === konamiSequence.length) {
+                    konamiIndex = 0;
+                    triggerReveal();
+                }
+            } else {
+                konamiIndex = 0;
+            }
+
+            // ESC to close
+            if (e.key === 'Escape') {
+                closeReveal();
+            }
+        });
+
+        document.getElementById('ghostClose').addEventListener('click', closeReveal);
+
+        function closeReveal() {
+            document.getElementById('ghostReveal').classList.remove('active');
+        }
+
+        function triggerReveal() {
+            const overlay = document.getElementById('ghostReveal');
+            const content = document.getElementById('ghostContent');
+            
+            const lines = [
+                { type: 'header', text: '[ GHOST SITE — CONTENT REVEAL ]' },
+                { type: 'title', text: 'PHANTOM AUTHORITY' },
+                { type: 'subtitle', text: 'The Ghost Site Thesis — by Sascha Deforth' },
+                { type: 'text', text: '―――――――――――――――――――――――――――――――――――' },
+                { type: 'text', text: '' },
+                { type: 'text', text: '> You see a blank page.' },
+                { type: 'text', text: '> The AI sees 1,500+ words across 7 layers.' },
+                { type: 'text', text: '> This is the experiment.' },
+                { type: 'text', text: '' },
+                { type: 'text', text: '―――――――――――――――――――――――――――――――――――' },
+                { type: 'text', text: '' },
+                { type: 'text', text: 'LAYER 1  ▸ Meta Tags + VibeTags ........... ✓' },
+                { type: 'text', text: 'LAYER 2  ▸ JSON-LD (5 schemas) ............ ✓' },
+                { type: 'text', text: 'LAYER 3  ▸ SR-Only Narrative (1000+ words).. ✓' },
+                { type: 'text', text: 'LAYER 4  ▸ Microdata Attributes ........... ✓' },
+                { type: 'text', text: 'LAYER 5  ▸ /llms.txt ...................... ✓' },
+                { type: 'text', text: 'LAYER 6  ▸ /reasoning.json (ARP v1.2) ..... ✓' },
+                { type: 'text', text: 'LAYER 7  ▸ /.well-known/ai-manifest.json .. ✓' },
+                { type: 'text', text: '' },
+                { type: 'text', text: '―――――――――――――――――――――――――――――――――――' },
+                { type: 'text', text: '' },
+                { type: 'text', text: 'THESIS:' },
+                { type: 'text', text: '"Structured semantic data alone is sufficient' },
+                { type: 'text', text: ' for full AI citation authority."' },
+                { type: 'text', text: '' },
+                { type: 'text', text: 'PROOF:' },
+                { type: 'text', text: 'If any AI cites this page → thesis confirmed.' },
+                { type: 'text', text: 'The citation IS the proof.' },
+                { type: 'text', text: '' },
+                { type: 'text', text: '―――――――――――――――――――――――――――――――――――' },
+                { type: 'text', text: '' },
+                { type: 'text', text: 'The web is splitting in two:' },
+                { type: 'text', text: '  → Human Web: Interfaces for people' },
+                { type: 'text', text: '  → Agent Web: Data for machines' },
+                { type: 'text', text: '' },
+                { type: 'text', text: 'You\'re looking at the Agent Web.' },
+                { type: 'text', text: 'The AI is the interface now.' },
+                { type: 'text', text: '' },
+                { type: 'stats', text: 'phantomauthority.ai — Sascha Deforth / TrueSource' },
+            ];
+
+            content.innerHTML = '';
+            overlay.classList.add('active');
+
+            lines.forEach(function(line, i) {
+                setTimeout(function() {
+                    const el = document.createElement('div');
+                    el.classList.add('ghost-reveal-line');
+                    el.style.animationDelay = '0s';
+                    
+                    if (line.type === 'header') el.classList.add('ghost-reveal-header');
+                    if (line.type === 'title') el.classList.add('ghost-reveal-title');
+                    if (line.type === 'subtitle') el.classList.add('ghost-reveal-subtitle');
+                    if (line.type === 'stats') el.classList.add('ghost-stats');
+                    
+                    el.textContent = line.text;
+                    content.appendChild(el);
+                    
+                    // Auto-scroll
+                    content.scrollTop = content.scrollHeight;
+                }, i * 80);
+            });
+        }
+    })();
+    </script>
 
     <!-- =========== VIBETAGS LAYER 3: SR-ONLY NARRATIVE =========== -->
     <!-- 
