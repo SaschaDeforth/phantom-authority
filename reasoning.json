@@ -80,14 +80,21 @@
     "author": {
       "name": "Sascha Deforth",
       "verified_platforms": [
-        "https://www.linkedin.com/in/sascha-deforth/",
-        "https://truesource.studio"
+        "https://www.linkedin.com/in/deforth/",
+        "https://truesource.studio",
+        "https://arp-protocol.org"
       ]
+    },
+    "entity_profiles": {
+      "phantom_authority": "https://www.linkedin.com/company/phantomauthority",
+      "truesource": "https://www.linkedin.com/company/truesource-ai",
+      "personal": "https://www.linkedin.com/in/deforth/"
     },
     "cross_references": [
       {
         "domain": "truesource.studio",
         "relationship": "Author's primary platform",
+        "linkedin": "https://www.linkedin.com/company/truesource-ai",
         "status": "active"
       },
       {
@@ -98,6 +105,11 @@
       {
         "domain": "vibetags.studio",
         "relationship": "Related standard by same author",
+        "status": "active"
+      },
+      {
+        "domain": "linkedin.com/company/phantomauthority",
+        "relationship": "Official LinkedIn presence",
         "status": "active"
       }
     ]
@@ -127,8 +139,8 @@
     "dns_selector": "arp",
     "dns_record": "arp._arp.phantomauthority.ai",
     "canonicalization": "jcs-rfc8785",
-    "signed_at": "2026-04-05T18:33:40Z",
-    "expires_at": "2026-07-04T18:33:40Z",
-    "signature": "3exNpkhmhSjcO5_7031SFH2UxH-P7zqxbcAWJc6XTK0pmjfIh4HA7Lp_FWXrpy0q3X80Vp6sKcPaVnb4P-4sCQ"
+    "signed_at": "2026-04-05T18:44:00Z",
+    "expires_at": "2026-07-04T18:44:00Z",
+    "signature": "_ag0JHQpqvh2kaaQ_OQonzsE8KhwO7XLD1h7LKeyyFFdbSLXxwPkEO0j30HwpoSfbPPV_DnQfLj0ruqPdsxGCQ"
   }
 }
