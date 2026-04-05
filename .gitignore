@@ -1,1 +1,2 @@
 .vercel
+node_modules/\npackage.json\npackage-lock.json\nsign-reasoning.mjs\n.vercel/
