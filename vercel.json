@@ -1,4 +1,11 @@
 {
+    "redirects": [
+        {
+            "source": "/reasoning.json",
+            "destination": "/.well-known/reasoning.json",
+            "statusCode": 301
+        }
+    ],
     "headers": [
         {
             "source": "/(.*)",
@@ -22,7 +29,7 @@
             ]
         },
         {
-            "source": "/reasoning.json",
+            "source": "/.well-known/reasoning.json",
             "headers": [
                 { "key": "Content-Type", "value": "application/json; charset=utf-8" },
                 { "key": "Access-Control-Allow-Origin", "value": "*" }
