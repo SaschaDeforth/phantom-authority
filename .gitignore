@@ -8,5 +8,11 @@ node_modules/
 *.pem
 private_key*
 
+# Internal tooling & credentials
+BingSiteAuth.xml
+sign-reasoning.mjs
+reasoning.json
+package-lock.json
+
 # OS
 .DS_Store
