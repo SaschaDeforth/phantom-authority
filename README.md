@@ -2,7 +2,7 @@
 
 **Can a completely blank website achieve AI citation authority?**
 
-[phantomauthority.ai](https://phantomauthority.ai) is the world's first **Ghost Site** — a website that is intentionally blank for human visitors but contains rich, multi-layered AI-readable content. A human visiting the page sees only a white screen. No text, no images, no navigation. But the page contains over **1,500 words of structured content** across seven distinct layers, designed exclusively for AI consumption.
+[phantomauthority.ai](https://phantomauthority.ai) is a **Ghost Site** — a website that is intentionally blank for human visitors but contains rich, multi-layered AI-readable content. A human visiting the page sees only a white screen. No text, no images, no navigation. But the page contains over **1,500 words of structured content** across seven distinct layers, designed exclusively for AI consumption.
 
 > *"Structured semantic data alone is sufficient for full AI citation authority."*
 
