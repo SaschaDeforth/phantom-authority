@@ -56,7 +56,23 @@ const pubKey = await ed.getPublicKeyAsync(privKey);
 const pubKeyB64 = toBase64(pubKey);
 const privKeyPem = formatPEM(privKey);
 
-// JCS canonicalize (RFC 8785)
+// Build signature metadata
+const now = new Date();
+const expires = new Date();
+expires.setDate(now.getDate() + 90);
+
+// Attach metadata FIRST with empty signature (enveloped signature pattern)
+payload._arp_signature = {
+    algorithm: "Ed25519",
+    dns_selector: SELECTOR,
+    dns_record: `${SELECTOR}._arp.${DOMAIN}`,
+    canonicalization: "jcs-rfc8785",
+    signed_at: now.toISOString().split('.')[0] + "Z",
+    expires_at: expires.toISOString().split('.')[0] + "Z",
+    signature: "" // Empty during canonicalization — metadata is signed!
+};
+
+// JCS canonicalize payload + metadata (RFC 8785)
 console.log('📐 JCS canonicalization (RFC 8785)...');
 const canonicalString = canonicalize(payload);
 const canonicalBytes = new TextEncoder().encode(canonicalString);
@@ -66,20 +82,8 @@ console.log('✍️  Signing with Ed25519...');
 const signatureBytes = await ed.signAsync(canonicalBytes, privKey);
 const signatureB64Url = toBase64Url(signatureBytes);
 
-// Build signature block
-const now = new Date();
-const expires = new Date();
-expires.setDate(now.getDate() + 90);
-
-payload._arp_signature = {
-    algorithm: "Ed25519",
-    dns_selector: SELECTOR,
-    dns_record: `${SELECTOR}._arp.${DOMAIN}`,
-    canonicalization: "jcs-rfc8785",
-    signed_at: now.toISOString().split('.')[0] + "Z",
-    expires_at: expires.toISOString().split('.')[0] + "Z",
-    signature: signatureB64Url
-};
+// Inject the final signature
+payload._arp_signature.signature = signatureB64Url;
 
 // Write signed file
 const signedJson = JSON.stringify(payload, null, 2);
