@@ -1,2 +1,12 @@
-.vercel
-node_modules/\npackage.json\npackage-lock.json\nsign-reasoning.mjs\n.vercel/
+# Dependencies
+node_modules/
+
+# Vercel
+.vercel/
+
+# Private Keys (NEVER commit)
+*.pem
+private_key*
+
+# OS
+.DS_Store
