@@ -74,11 +74,14 @@ graph TB
     subgraph "🤖 What AI Systems See"
         L1["① Semantic Meta Tags + VibeTags"]
         L2["② JSON-LD Structured Data"]
-        L3["③ SR-Only Narrative (1,000+ words)"]
-        L4["④ Microdata Attributes"]
-        L5["⑤ llms.txt"]
-        L6["⑥ reasoning.json (ARP v1.2)"]
-        L7["⑦ AI Discovery Manifest"]
+        L3["③ Microdata Attributes"]
+        L4["④ llms.txt"]
+        L5["⑤ reasoning.json (ARP v1.2)"]
+        L6["⑥ AI Discovery Manifest"]
+    end
+    
+    subgraph "⚠️ Deprecated Layer"
+        D["SR-Only Narrative — stripped by AI crawlers"]
     end
     
     H -.->|"same page"| L1
@@ -87,30 +90,31 @@ graph TB
     L3 --> L4
     L4 --> L5
     L5 --> L6
-    L6 --> L7
 
     style H fill:#ffffff,stroke:#e5e7eb,color:#000
     style L1 fill:#7c3aed,stroke:#6d28d9,color:#fff
     style L2 fill:#6d28d9,stroke:#5b21b6,color:#fff
-    style L3 fill:#5b21b6,stroke:#4c1d95,color:#fff
-    style L4 fill:#4c1d95,stroke:#3b0764,color:#fff
-    style L5 fill:#06b6d4,stroke:#0891b2,color:#fff
-    style L6 fill:#0891b2,stroke:#0e7490,color:#fff
-    style L7 fill:#0e7490,stroke:#155e75,color:#fff
+    style L3 fill:#4c1d95,stroke:#3b0764,color:#fff
+    style L4 fill:#06b6d4,stroke:#0891b2,color:#fff
+    style L5 fill:#0891b2,stroke:#0e7490,color:#fff
+    style L6 fill:#0e7490,stroke:#155e75,color:#fff
+    style D fill:#991b1b,stroke:#7f1d1d,color:#fff
 ```
 
 <details>
 <summary><strong>📋 Layer Details</strong></summary>
 
-| # | Layer | Technology | Purpose |
-|:-:|-------|-----------|---------|
-| 1 | **Meta + VibeTags** | `<meta>`, Open Graph, VibeTags | Crawler discovery, emotional brand encoding |
-| 2 | **JSON-LD** | Schema.org | 6 schemas: `ScholarlyArticle`, `Person`, `Organization`, `FAQPage`, `WebSite`, `ResearchOrganization` |
-| 3 | **SR-Only Narrative** | `sr-only` CSS | 1,000+ words of screen-reader-accessible research text |
-| 4 | **Microdata** | `itemscope`/`itemprop` | Inline entity extraction for knowledge graph builders |
-| 5 | **llms.txt** | Markdown | High-density AI-first content summary |
-| 6 | **reasoning.json** | [ARP v1.2](https://arp-protocol.org) | Ed25519-signed entity claims with DNS verification |
-| 7 | **AI Manifest** | JSON | `.well-known/ai-manifest.json` for automated agent discovery |
+| # | Layer | Technology | Purpose | Status |
+|:-:|-------|-----------|---------|:------:|
+| 1 | **Meta + VibeTags** | `<meta>`, Open Graph, VibeTags | Crawler discovery, emotional brand encoding | ✅ |
+| 2 | **JSON-LD** | Schema.org | 6 schemas: `ScholarlyArticle`, `Person`, `Organization`, `FAQPage`, `WebSite`, `ResearchOrganization` | ✅ |
+| 3 | **Microdata** | `itemscope`/`itemprop` | Inline entity extraction for knowledge graph builders | ✅ |
+| 4 | **llms.txt** | Markdown | High-density AI-first content summary | ✅ |
+| 5 | **reasoning.json** | [ARP v1.2](https://arp-protocol.org) | Ed25519-signed entity claims with DNS verification | ✅ |
+| 6 | **AI Manifest** | JSON | `.well-known/ai-manifest.json` for automated agent discovery | ✅ |
+| ~~7~~ | ~~**SR-Only Narrative**~~ | ~~`sr-only` CSS~~ | ~~1,000+ words of screen-reader-accessible text~~ | ❌ |
+
+> **⚠️ Research Finding:** Canary token forensics confirmed that **SR-Only content is stripped by major AI crawlers** (ChatGPT, Perplexity, Gemini). Despite using the standard `sr-only` accessibility pattern (Bootstrap, Tailwind, WCAG), AI systems do not parse clip-rect hidden content. This layer has been **deprecated** as an effective AI signal — a key finding of this experiment.
 
 </details>
 
@@ -124,6 +128,7 @@ graph TB
 | Human-visible design is **not** a prerequisite for AI authority | The web is bifurcating into **Human Web** + **Agent Web** |
 | Phantom Authority is independent of human interaction | First web authority model that bypasses users entirely |
 | The AI system becomes the interface | Users never visit the source — the AI visits for them |
+| **SR-Only content is stripped by AI crawlers** | Accessibility ≠ AI visibility — a common misconception |
 
 > **The web is splitting in two.** The Human Web is visual, interactive, emotional. The Agent Web is structured, semantic, invisible. They can exist independently — and Phantom Authority proves it.
 
