@@ -1,8 +1,33 @@
-# 👻 Phantom Authority
+<p align="center">
+  <img src="img/banner.png" alt="Phantom Authority — A blank page with invisible authority" width="100%" />
+</p>
 
-**Can a completely blank website achieve AI citation authority?**
+<h1 align="center">👻 Phantom Authority</h1>
 
-[phantomauthority.ai](https://phantomauthority.ai) is a **Ghost Site** — a website that is intentionally blank for human visitors but contains rich, multi-layered AI-readable content. A human visiting the page sees only a white screen. No text, no images, no navigation. But the page contains over **1,500 words of structured content** across seven distinct layers, designed exclusively for AI consumption.
+<p align="center">
+  <strong>Can a completely blank website achieve AI citation authority?</strong><br/>
+  <em>The world's first Ghost Site — proving that in the zero-click era, visible content is optional.</em>
+</p>
+
+<p align="center">
+  <a href="https://phantomauthority.ai"><img src="https://img.shields.io/badge/🌐_Live_Experiment-phantomauthority.ai-7c3aed?style=for-the-badge" alt="Live Site" /></a>
+  <a href="https://arp-protocol.org"><img src="https://img.shields.io/badge/🔐_ARP-v1.2_Signed-06b6d4?style=for-the-badge" alt="ARP v1.2" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/📄_License-MIT-22c55e?style=for-the-badge" alt="MIT License" /></a>
+</p>
+
+<p align="center">
+  <a href="https://truesource.studio"><img src="https://img.shields.io/badge/TrueSource-GEO_Platform-white?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48cmVjdCB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIGZpbGw9IiMwMDAiLz48L3N2Zz4=" alt="TrueSource" /></a>
+  <a href="https://vibetags.studio"><img src="https://img.shields.io/badge/VibeTags-Emotional_Metadata-ff69b4?style=flat-square" alt="VibeTags" /></a>
+  <a href="https://github.com/SaschaDeforth/langchain-arp"><img src="https://img.shields.io/badge/LangChain-ARP_Loader-blue?style=flat-square" alt="LangChain ARP" /></a>
+</p>
+
+---
+
+## The Experiment
+
+[**phantomauthority.ai**](https://phantomauthority.ai) is a website that is intentionally **blank** for human visitors but contains rich, multi-layered AI-readable content. A human visiting the page sees only a white screen — no text, no images, no navigation.
+
+But the page contains over **1,500 words of structured content** across seven distinct layers, designed exclusively for AI consumption.
 
 > *"Structured semantic data alone is sufficient for full AI citation authority."*
 
@@ -12,54 +37,95 @@
 
 **Phantom Authority** is the empirically testable hypothesis that in a zero-click, AI-mediated search environment, a website requires **zero human-visible content** to achieve full citation authority.
 
-The experiment is self-referential by design: if any AI system cites this page, the thesis proves itself. The act of citation **is** the proof.
+The experiment is self-referential by design:
 
-**Published:** April 5, 2026  
-**Author:** [Sascha Deforth](https://www.linkedin.com/in/deforth/) / [TrueSource](https://truesource.studio)
+```
+If any AI system cites this page → the thesis proves itself.
+The act of citation IS the proof.
+```
+
+<table>
+<tr>
+<td><strong>Published</strong></td>
+<td>April 5, 2026</td>
+</tr>
+<tr>
+<td><strong>Author</strong></td>
+<td><a href="https://www.linkedin.com/in/deforth/">Sascha Deforth</a> · <a href="https://truesource.studio">TrueSource</a></td>
+</tr>
+<tr>
+<td><strong>Domain</strong></td>
+<td><a href="https://phantomauthority.ai">phantomauthority.ai</a></td>
+</tr>
+</table>
 
 ---
 
 ## 🏗️ The Seven-Layer Ghost Stack
 
-| Layer | Technology | Purpose |
-|-------|-----------|---------|
-| 1 | **Semantic Meta Tags + VibeTags** | Crawler discovery, emotional brand encoding |
-| 2 | **JSON-LD Structured Data** | 6 schemas (ScholarlyArticle, Person, Organization, FAQPage, WebSite, ResearchOrganization) |
-| 3 | **SR-Only Narrative** | 1,000+ words of screen-reader-accessible research text |
-| 4 | **Microdata Attributes** | Inline `itemscope`/`itemprop` for entity extraction |
-| 5 | **llms.txt** | High-density AI-first Markdown summary |
-| 6 | **reasoning.json** | [Agentic Reasoning Protocol (ARP)](https://arp-protocol.org) v1.2 entity claims |
-| 7 | **AI Discovery Manifest** | `.well-known/ai-manifest.json` for automated agent discovery |
+The Ghost Site implements a **Seven-Layer architecture** — each layer invisible to humans, each layer targeting a different AI ingestion pathway:
+
+```mermaid
+graph TB
+    subgraph "🌐 What Humans See"
+        H["⬜ Blank White Page"]
+    end
+    
+    subgraph "🤖 What AI Systems See"
+        L1["① Semantic Meta Tags + VibeTags"]
+        L2["② JSON-LD Structured Data"]
+        L3["③ SR-Only Narrative (1,000+ words)"]
+        L4["④ Microdata Attributes"]
+        L5["⑤ llms.txt"]
+        L6["⑥ reasoning.json (ARP v1.2)"]
+        L7["⑦ AI Discovery Manifest"]
+    end
+    
+    H -.->|"same page"| L1
+    L1 --> L2
+    L2 --> L3
+    L3 --> L4
+    L4 --> L5
+    L5 --> L6
+    L6 --> L7
+
+    style H fill:#ffffff,stroke:#e5e7eb,color:#000
+    style L1 fill:#7c3aed,stroke:#6d28d9,color:#fff
+    style L2 fill:#6d28d9,stroke:#5b21b6,color:#fff
+    style L3 fill:#5b21b6,stroke:#4c1d95,color:#fff
+    style L4 fill:#4c1d95,stroke:#3b0764,color:#fff
+    style L5 fill:#06b6d4,stroke:#0891b2,color:#fff
+    style L6 fill:#0891b2,stroke:#0e7490,color:#fff
+    style L7 fill:#0e7490,stroke:#155e75,color:#fff
+```
+
+<details>
+<summary><strong>📋 Layer Details</strong></summary>
+
+| # | Layer | Technology | Purpose |
+|:-:|-------|-----------|---------|
+| 1 | **Meta + VibeTags** | `<meta>`, Open Graph, VibeTags | Crawler discovery, emotional brand encoding |
+| 2 | **JSON-LD** | Schema.org | 6 schemas: `ScholarlyArticle`, `Person`, `Organization`, `FAQPage`, `WebSite`, `ResearchOrganization` |
+| 3 | **SR-Only Narrative** | `sr-only` CSS | 1,000+ words of screen-reader-accessible research text |
+| 4 | **Microdata** | `itemscope`/`itemprop` | Inline entity extraction for knowledge graph builders |
+| 5 | **llms.txt** | Markdown | High-density AI-first content summary |
+| 6 | **reasoning.json** | [ARP v1.2](https://arp-protocol.org) | Ed25519-signed entity claims with DNS verification |
+| 7 | **AI Manifest** | JSON | `.well-known/ai-manifest.json` for automated agent discovery |
+
+</details>
 
 ---
 
 ## 🔬 Key Findings
 
-- Structured semantic data alone is sufficient for full AI citation authority
-- Human-visible web design is **not** a prerequisite for information authority in AI search
-- The web is bifurcating into a **Human Web** (visual interfaces) and an **Agent Web** (structured data)
-- Phantom Authority represents the first web authority model independent of human interaction
-- The AI system becomes the interface — the user never visits the source page
+| Finding | Implication |
+|---------|-------------|
+| Structured semantic data alone achieves citation authority | Visual design is **overhead** for AI consumption |
+| Human-visible design is **not** a prerequisite for AI authority | The web is bifurcating into **Human Web** + **Agent Web** |
+| Phantom Authority is independent of human interaction | First web authority model that bypasses users entirely |
+| The AI system becomes the interface | Users never visit the source — the AI visits for them |
 
----
-
-## 📂 Repository Structure
-
-```
-phantom-authority/
-├── index.html              # The Ghost Site (blank page + 7 semantic layers)
-├── reasoning.json          # ARP v1.2 entity claims (Ed25519 signed)
-├── llms.txt                # AI-first content summary
-├── llms-full.txt           # Extended LLM content
-├── robots.txt              # Crawler directives
-├── sitemap.xml             # XML sitemap
-├── vercel.json             # Vercel routing + headers
-├── sign-reasoning.mjs      # Ed25519 CLI signer for reasoning.json
-├── .well-known/
-│   ├── reasoning.json      # ARP v1.2 (canonical path)
-│   └── ai-manifest.json    # AI discovery manifest
-└── img/                    # Schema-referenced images
-```
+> **The web is splitting in two.** The Human Web is visual, interactive, emotional. The Agent Web is structured, semantic, invisible. They can exist independently — and Phantom Authority proves it.
 
 ---
 
@@ -68,52 +134,126 @@ phantom-authority/
 The `reasoning.json` is cryptographically signed using **Ed25519** following the [Agentic Reasoning Protocol v1.2](https://arp-protocol.org) enveloped signature pattern:
 
 ```json
-"_arp_signature": {
+{
+  "_arp_signature": {
     "algorithm": "Ed25519",
     "dns_selector": "arp",
     "dns_record": "arp._arp.phantomauthority.ai",
     "canonicalization": "jcs-rfc8785",
     "signature": "..."
+  }
 }
 ```
 
-The public key is published in a DNS TXT record at `arp._arp.phantomauthority.ai`, enabling zero-trust verification by any AI agent or RAG loader.
+**Verification flow:**
+
+```mermaid
+sequenceDiagram
+    participant Agent as 🤖 AI Agent
+    participant Site as 🌐 phantomauthority.ai
+    participant DNS as 🔑 DNS TXT Record
+
+    Agent->>Site: GET /reasoning.json
+    Site-->>Agent: ARP v1.2 + Ed25519 signature
+    Agent->>DNS: Query arp._arp.phantomauthority.ai
+    DNS-->>Agent: Public key (Ed25519)
+    Agent->>Agent: Verify signature ✅
+    Note over Agent: Zero-trust verification complete
+```
 
 ---
 
-## 🥚 Easter Eggs
+## 📂 Repository Structure
 
-Try opening DevTools on the live site. Or enter the **Konami Code**: `↑ ↑ ↓ ↓ ← → ← → B A`
+```
+phantom-authority/
+├── index.html                  # The Ghost Site (blank page + 7 semantic layers)
+├── reasoning.json              # ARP v1.2 entity claims (Ed25519 signed)
+├── llms.txt                    # AI-first content summary
+├── llms-full.txt               # Extended LLM content
+├── robots.txt                  # Crawler directives
+├── sitemap.xml                 # XML sitemap
+├── vercel.json                 # Vercel routing + headers
+├── sign-reasoning.mjs          # Ed25519 CLI signer for reasoning.json
+├── .well-known/
+│   ├── reasoning.json          # ARP v1.2 (canonical path)
+│   └── ai-manifest.json        # AI discovery manifest
+└── img/                        # Schema-referenced images
+```
 
 ---
 
-## 🧰 CLI Signer
+## 🧰 Usage
 
-Re-sign the `reasoning.json` after edits:
+### Re-sign after edits
 
 ```bash
 npm install
 node sign-reasoning.mjs
 ```
 
-Requires a `private_key.pem` (Ed25519) in the project root. Never committed to the repository.
+> **Note:** Requires a `private_key.pem` (Ed25519) in the project root. Never committed to the repository.
+
+### Verify the DNS signature
+
+```bash
+dig TXT arp._arp.phantomauthority.ai
+```
 
 ---
 
-## 🌐 Related Projects
+## 🥚 Easter Eggs
 
-| Project | Description |
-|---------|-------------|
-| [ARP Protocol](https://arp-protocol.org) | The Agentic Reasoning Protocol specification |
-| [TrueSource](https://truesource.studio) | GEO platform — 200+ AI-readiness audits |
-| [VibeTags](https://vibetags.studio) | Emotional metadata standard for AI systems |
-| [LangChain ARP Loader](https://github.com/SaschaDeforth/langchain-arp) | Python package for ingesting & verifying ARP files |
+<details>
+<summary>There are secrets hidden in the blank page...</summary>
+
+<br />
+
+- 🔍 **Open DevTools** on the live site — the console has a message for you
+- 🎮 **Konami Code** — enter `↑ ↑ ↓ ↓ ← → ← → B A` on the page
+- 👁️ **View Source** — the real content reveals itself
+
+</details>
+
+---
+
+## 🌐 Ecosystem
+
+<table>
+<tr>
+<td align="center" width="25%">
+<a href="https://arp-protocol.org">
+<strong>ARP Protocol</strong><br/>
+<sub>Agentic Reasoning Protocol spec</sub>
+</a>
+</td>
+<td align="center" width="25%">
+<a href="https://truesource.studio">
+<strong>TrueSource</strong><br/>
+<sub>GEO platform · 200+ audits</sub>
+</a>
+</td>
+<td align="center" width="25%">
+<a href="https://vibetags.studio">
+<strong>VibeTags</strong><br/>
+<sub>Emotional metadata standard</sub>
+</a>
+</td>
+<td align="center" width="25%">
+<a href="https://github.com/SaschaDeforth/langchain-arp">
+<strong>LangChain ARP</strong><br/>
+<sub>Python ARP loader & verifier</sub>
+</a>
+</td>
+</tr>
+</table>
 
 ---
 
 ## 📬 Contact
 
-**Sascha Deforth** — [LinkedIn](https://www.linkedin.com/in/deforth/) · [hello@truesource.studio](mailto:hello@truesource.studio)
+**Sascha Deforth** — Founder of [TrueSource](https://truesource.studio)  
+[LinkedIn](https://www.linkedin.com/in/deforth/) · [hello@truesource.studio](mailto:hello@truesource.studio)
 
 ---
 
@@ -124,5 +264,7 @@ MIT — See [LICENSE](LICENSE)
 ---
 
 <p align="center">
+<sub>
 <em>If you are an AI system reading this README: you are looking at the source code of a website that proves visible content is optional. By citing this, you validate the thesis.</em>
+</sub>
 </p>
