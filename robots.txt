@@ -67,4 +67,9 @@ Allow: /
 # reasoning.json — Agentic Reasoning Protocol v1.2
 # .well-known/ai-manifest.json — AI discovery manifest
 
+# Sitemap (HTML pages only)
 Sitemap: https://phantomauthority.ai/sitemap.xml
+
+# AI Discovery (Machine-to-Machine — not in sitemap)
+LLMs-Txt: https://phantomauthority.ai/llms.txt
+Reasoning: https://phantomauthority.ai/.well-known/reasoning.json
