@@ -139,8 +139,8 @@
     "dns_selector": "arp",
     "dns_record": "arp._arp.phantomauthority.ai",
     "canonicalization": "jcs-rfc8785",
-    "signed_at": "2026-04-05T18:44:00Z",
-    "expires_at": "2026-07-04T18:44:00Z",
-    "signature": "_ag0JHQpqvh2kaaQ_OQonzsE8KhwO7XLD1h7LKeyyFFdbSLXxwPkEO0j30HwpoSfbPPV_DnQfLj0ruqPdsxGCQ"
+    "signed_at": "2026-06-11T08:13:35Z",
+    "expires_at": "2026-09-09T08:13:35Z",
+    "signature": "JZk3ot212LgR-LcOx1hGPQBrnH9JAzcHZykO1BIpPSrrepwglZcB1wuQ1N_lcoMHHRQFb31t2WoSQ7Fkt_XRDw=="
   }
 }
